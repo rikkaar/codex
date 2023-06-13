@@ -1,0 +1,209 @@
+@font-face {
+    src: url("./Rubik-Regular.ttf");
+    font-family: 'Rubik';
+    font-weight: 400;
+}
+
+@font-face {
+    src: url("./Rubik-Medium.ttf");
+    font-family: 'Rubik';
+    font-weight: 500;
+}
+
+@font-face {
+    src: url("./Rubik-SemiBold.ttf");
+    font-family: 'Rubik';
+    font-weight: 600;
+}
+
+
+.btn-font {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.h1 {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 57px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: var(--softWhite);
+}
+
+.h2 {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 130%;
+    /* or 78px */
+    leading-trim: both;
+    text-edge: cap;
+}
+
+.h3 {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    /* or 42px */
+
+    text-align: center;
+
+    color: var(--softWhite);
+}
+
+.card-accent-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 130%;
+    /* or 47px */
+
+    text-transform: uppercase;
+
+    color: var(--softWhite);
+}
+
+.card-title-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+}
+
+.card-subtitle-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+}
+
+.card-li-font {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 235%;
+    /* or 47px */
+
+
+    color: var(--softWhite);
+}
+
+.card-back-font {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    /* or 28px */
+
+
+    color: var(--softWhite);
+}
+
+.card-back-font--highlight {
+    font-weight: 500;
+}
+
+.team-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    /* 1 */
+
+    background: linear-gradient(225deg, #A531DC 0%, #1952E2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: var(--softWhite);
+}
+
+.h1-contacts {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+
+    /* leading-trim and text-edge are draft CSS properties.
+
+    Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
+    */
+    leading-trim: both;
+    text-edge: cap;
+
+    color: var(--softWhite);
+
+}
+
+.h2-contacts {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 180%;
+    /* or 43px */
+
+    /* leading-trim and text-edge are draft CSS properties.
+
+    Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
+    */
+    leading-trim: both;
+    text-edge: cap;
+
+    color: var(--softWhite);
+}
+
+.form-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: var(--softWhite);
+}
+
+.workflow__nums-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 190px;
+    line-height: 130%;
+    /* identical to box height, or 247px */
+}

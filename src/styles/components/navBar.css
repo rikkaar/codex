@@ -1,0 +1,39 @@
+.navbar-bg {
+    background-color: rgba(2, 7, 37, 0.8);
+    width: 100%;
+}
+
+.navbar {
+    height: 108px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar__logo {
+    height: 27%;
+    width: 5%;
+    min-width: 40px;
+}
+
+.navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    cursor: pointer;
+}
+
+.navbar__link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.navbar__phone {
+    background: linear-gradient(152.75deg, #55AFF3 0.1%, #7C62FD 99.93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

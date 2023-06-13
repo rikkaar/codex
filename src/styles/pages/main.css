@@ -1,0 +1,211 @@
+.welcome {
+    padding-top: 92px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 45px 45px;
+    grid-template-areas:
+    "welcome__main welcome__main welcome__2"
+    "welcome__main welcome__main welcome__3";
+}
+
+.welcome__main {
+    grid-area: welcome__main;
+    gap: 130px;
+    background: linear-gradient(225deg, #A531DC 0%, #1952E2 100%);
+}
+
+.welcome__2 {
+    grid-area: welcome__2;
+    background: linear-gradient(225deg, #551EF0 0%, #0FE0FA 99.99%, #0AEDFB 100%);
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.welcome__3 {
+    grid-area: welcome__3;
+    background: linear-gradient(225deg, #00B3FF 0%, #9D00C6 100%);
+}
+
+.welcome__logo {
+    width: 130px;
+    height: 60px;
+}
+
+.workflow__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+}
+
+.workflow__cards div {
+    width: 100%;
+    /*aspect-ratio: 1 / 1;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.workflow__item {
+    padding-left: 30px;
+    position: relative;
+}
+
+.workflow__item:before {
+    content: "·";
+    position: absolute;
+    left: 15px;
+    font-size: 20px;
+}
+
+.workflow__card1 {
+    background: linear-gradient(225deg, #A531DC 0%, #1952E2 100%);
+}
+
+.workflow__card2 {
+    background: linear-gradient(225deg, #00B3FF 0%, #9D00C6 100%);
+}
+
+.workflow__card3 {
+    background: linear-gradient(225deg, #551EF0 0%, #0FE0FA 99.99%, #0AEDFB 100%);
+}
+
+.workflow__list {
+    width: 100%;
+}
+
+.workflow__nums {
+    position: absolute;
+    bottom: -71px;
+    right: 33px;
+    -webkit-text-stroke: 5px var(--softWhite);
+    -webkit-text-fill-color: transparent;
+}
+
+.about__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    grid-auto-columns: 1fr;
+    width: 100%;
+}
+
+.about__card {
+    border-radius: 40px;
+    justify-content: flex-start;
+    background: rgba(249, 249, 249, 0.95);
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+}
+
+.about__card--back {
+    border-radius: 40px;
+    justify-content: flex-start;
+    background: linear-gradient(225deg, rgba(165, 49, 220, 0.8) 0%, rgba(25, 82, 226, 0.8) 100%), #F7F7F7;
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.about__card h4 {
+    align-self: flex-start;
+}
+
+.about__card--back h4 {
+    align-self: flex-start;
+}
+
+.team__img {
+    position: absolute;
+    width: 65%;
+    height: 68%;
+    bottom: 0;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.programmer-img-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 68%;
+    overflow: hidden;
+    gap: -20px;
+}
+
+.card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.team__project {
+    background-image: url('/src/assets/project_manager.svg');
+}
+
+.team__analyst {
+    background-image: url('/src/assets/analyst.svg');
+}
+
+.team__designer {
+    background-image: url('/src/assets/designer.svg');
+}
+
+.team__qaengineer {
+    background-image: url('/src/assets/qa_engineer.svg');
+}
+
+.team__programmer {
+    background-image: url('/src/assets/programmer3.svg');
+    /*background-repeat: initial;*/
+    width: 100%;
+    height: 70%;
+}
+
+.team__programmer--blur {
+    background-image: url('/src/assets/programmer.svg');
+    opacity: .7;
+    /*background-repeat: initial;*/
+    /*width: 83%;*/
+}
+
+.programmer__img {
+    width: 65%;
+    height: 100%;
+    bottom: 0;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.about__card--programmer {
+    grid-column: 2 span;
+    aspect-ratio: initial;
+}
+
+.card-title-font--center {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}

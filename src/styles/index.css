@@ -1,0 +1,14 @@
+@import "resetter.css";
+@import "overall.css";
+@import "./fonts/fonts.css";
+@import "scrollbar.css";
+
+
+@import "./components/notFound.css";
+@import "./components/navBar.css";
+
+
+@import "./pages/main.css";
+
+
+@import "media-quiries.css";
