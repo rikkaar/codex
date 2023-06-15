@@ -8,21 +8,21 @@ const NavBar = () => {
         <header className={"navbar-bg"}>
             <div className={"container navbar"}>
                 <Link to={"/"} className={"navbar__logo logo"}></Link>
-                <ul className={"navbar__links"}>
-                    <li className={"navbar__link"}>
+                <ul className={"navbar__fonts"}>
+                    <li className={"navbar__font"}>
                         <Scroll spy={true} smooth={true} offset={50} duration={1000} to={"about"} className={""}>О
                             нас</Scroll>
                     </li>
-                    <li className={"navbar__link"}>
+                    <li className={"navbar__font"}>
                         <Scroll spy={true} smooth={true} offset={50} duration={1000} to={"projects"}
                                 className={""}>Проекты</Scroll>
                     </li>
-                    <Link to={"/calculator"} className={"navbar__link"}>Калькулятор</Link>
-                    <li className={"navbar__link"}>
+                    <Link to={"/calculator"} className={"navbar__font"}>Калькулятор</Link>
+                    <li className={"navbar__font"}>
                         <Scroll spy={true} smooth={true} offset={50} duration={1000} to={"about"}
                                 className={""}>Контакты</Scroll>
                     </li>
-                    <li className={"navbar__link"}>
+                    <li className={"navbar__font"}>
                         <Link to={"tel:+74997046237"} className={"navbar__phone"}>+7 (499) 704-62-37</Link>
                     </li>
                 </ul>

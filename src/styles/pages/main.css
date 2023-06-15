@@ -1,14 +1,14 @@
 .welcome {
-    padding-top: 92px;
+    padding-top: 62px;
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 45px;
+    gap: 20px;
     grid-template-areas:
     "welcome__main welcome__main welcome__2"
     "welcome__main welcome__main welcome__3";
-    height: 770px;
+    height: 616px;
 }
 
 .welcome__main {
@@ -20,8 +20,7 @@
 .welcome__2 {
     grid-area: welcome__2;
     background: linear-gradient(225deg, #551EF0 0%, #0FE0FA 99.99%, #0AEDFB 100%);
-    align-items: flex-start;
-    gap: 50px;
+    gap: 35px;
 }
 
 .welcome__3 {
@@ -39,23 +38,28 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    grid-column-gap: 40px;
+    grid-column-gap: 30px;
 }
 
-.workflow__cards div {
+.workflow__card {
     width: 100%;
-    aspect-ratio: auto 1 / 1;
+    aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    padding: 40px;
+    gap: 5px;
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
+
+    filter: drop-shadow(0px 0px 30px rgba(33, 42, 53, 0.13));
+    border-radius: 30px;
+    padding: 22px;
 }
 
-
+.workflow__title {
+    margin-top: 12px;
+}
 
 .workflow__item {
     padding-left: 30px;
@@ -65,8 +69,8 @@
 .workflow__item:before {
     content: "·";
     position: absolute;
-    left: 15px;
-    font-size: 20px;
+    left: 17px;
+    font-size: 12px;
 }
 
 .workflow__card1 {
@@ -85,14 +89,14 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .workflow__nums {
     position: absolute;
-    bottom: -71px;
-    right: 33px;
-    -webkit-text-stroke: 5px var(--softWhite);
+    bottom: -47px;
+    right: 20px;
+    -webkit-text-stroke: 4px var(--softWhite);
     -webkit-text-fill-color: transparent;
 }
 
@@ -105,7 +109,7 @@
 }
 
 .about__card {
-    border-radius: 40px;
+    border-radius: 30px;
     justify-content: flex-start;
     background: rgba(249, 249, 249, 0.95);
     cursor: pointer;
@@ -114,20 +118,20 @@
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-
     /*display: flex;*/
     /*flex-direction: column;*/
     /*justify-content: space-between;*/
 }
 
 .about__card--back {
-    border-radius: 40px;
+    border-radius: 30px;
     justify-content: flex-start;
     background: linear-gradient(225deg, rgba(165, 49, 220, 0.8) 0%, rgba(25, 82, 226, 0.8) 100%), #F7F7F7;
     cursor: pointer;
     position: absolute;
     width: 100%;
     height: 100%;
+    padding: 30px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }

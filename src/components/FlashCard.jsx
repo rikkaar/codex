@@ -10,7 +10,7 @@ const cards = [
         <div className="card about__card--back flashcard__back">
             <h4 className={"card-title-font"}>Project manager</h4>
             <ul className={"card__list"}>
-                <li className={"card-back-font"}>отвечает за весь проект — от встречи с клиентом и формулировки задачи до сдачи и запуска</li>
+                <li className={"card-back-font"}>Отвечает за весь проект — от встречи с клиентом и формулировки задачи до сдачи и запуска</li>
             </ul>
         </div>
     </div>,
@@ -22,7 +22,7 @@ const cards = [
         <div className="card about__card--back flashcard__back">
             <h4 className={"card-title-font"}>Analyst</h4>
             <ul className={"card__list"}>
-                <li className={"card-back-font"}>анализ потребностей заказчика и формулировка требований к программной системе, которая должна покрыть эти потребности</li>
+                <li className={"card-back-font"}>Анализ потребностей заказчика и формулировка требований к программной системе, которая должна покрыть эти потребности</li>
             </ul>
         </div>
     </div>,
@@ -34,7 +34,7 @@ const cards = [
         <div className="card about__card--back flashcard__back">
             <h4 className={"card-title-font"}>Designer</h4>
             <ul className={"card__list"}>
-                <li className={"card-back-font"}>обеспечить команду разработки тем материалом, из которого они будут собирать продукт</li>
+                <li className={"card-back-font"}>Обеспечить команду разработки тем материалом, из которого они будут собирать продукт</li>
             </ul>
         </div>
     </div>,
@@ -46,7 +46,7 @@ const cards = [
         <div className="card about__card--back flashcard__back">
             <h4 className={"card-title-font"}>QA Engineer</h4>
             <ul className={"card__list"}>
-                <li className={"card-back-font"}>тестирование и контроль качества продукта на всех этапах создания</li>
+                <li className={"card-back-font"}>Тестирование и контроль качества продукта на всех этапах создания</li>
             </ul>
         </div>
     </div>,
@@ -54,11 +54,6 @@ const cards = [
         <div className="card about__card about__card--programmer">
             <h4 className={"team-font card-title-font--center"}>Programmer</h4>
             <span className={"team__img team__programmer"}></span>
-            {/*<div className="programmer-img-container">*/}
-            {/*    <span className={"programmer__img team__programmer--blur"}></span>*/}
-            {/*    <span className={"programmer__img team__programmer"}></span>*/}
-            {/*    <span className={"programmer__img team__programmer--blur"}></span>*/}
-            {/*</div>*/}
         </div>
         <div className="card flashcard__back about__card--back">
             <h4 className={"card-title-font card-title-font--center"}>Programmer</h4>

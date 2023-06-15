@@ -25,7 +25,7 @@
 
 .btn-font {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 13px;
 }
 
 .h1 {
@@ -45,7 +45,7 @@
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 60px;
+    font-size: 42px;
     /*line-height: 130%;*/
     /*!* or 78px *!*/
 
@@ -57,7 +57,7 @@
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 23px;
     /*line-height: 130%;*/
     /*!* or 42px *!*/
 
@@ -65,15 +65,27 @@
     color: var(--softWhite);
 }
 
+.navbar__font {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    text-transform: uppercase;
+
+    color: var(--softWhite);
+}
+
 .card-accent-font {
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 26px;
     /*line-height: 130%;*/
     /*!* or 47px *!*/
 
-    width: 80%;
+    width: 90%;
 
     text-transform: uppercase;
 
@@ -84,7 +96,7 @@
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 22px;
     line-height: 38px;
     /* identical to box height */
 
@@ -93,9 +105,8 @@
 
 .card-subtitle-font {
     font-family: 'Rubik', sans-serif;
-    font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 14px;
     /*line-height: 24px;*/
     /*!* identical to box height *!*/
 
@@ -104,9 +115,8 @@
 
 .card-li-font {
     font-family: 'Roboto', sans-serif;
-    font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 14px;
     /*line-height: 235%;*/
     /*!* or 47px *!*/
 
@@ -118,7 +128,7 @@
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 140%;
     /* or 28px */
 
@@ -134,7 +144,7 @@
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 23px;
     line-height: 38px;
     /* identical to box height */
 
@@ -209,7 +219,7 @@
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 190px;
+    font-size: 135px;
     line-height: 130%;
     /* identical to box height, or 247px */
 }
