@@ -15,11 +15,11 @@ const Main = () => {
                     <h1 className={"h1"}>Слоган</h1>
                     <button className={"btn btn-font welcome__btn"}>Отправить заявку</button>
                 </div>
-                <div className="card welcome__2">
+                <div className="welcome-card welcome__2">
                     <p className={"card-subtitle-font"}>Мы разработаем для вас</p>
                     <p className={"card-accent-font"}>Мобильные приложения</p>
                 </div>
-                <div className="card welcome__3">
+                <div className="welcome-card welcome__3">
                     <p className={"card-accent-font"}>Поддержка разработанных нами продуктов</p>
                 </div>
             </section>

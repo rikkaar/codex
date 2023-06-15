@@ -33,6 +33,7 @@
 }
 
 .navbar__phone {
+    font-weight: 600;
     background: linear-gradient(152.75deg, #55AFF3 0.1%, #7C62FD 99.93%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

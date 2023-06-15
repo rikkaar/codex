@@ -2,12 +2,13 @@
     padding-top: 92px;
     display: grid;
     grid-auto-columns: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 45px 45px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 45px;
     grid-template-areas:
     "welcome__main welcome__main welcome__2"
     "welcome__main welcome__main welcome__3";
+    height: 770px;
 }
 
 .welcome__main {
@@ -37,12 +38,13 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
     grid-column-gap: 40px;
 }
 
 .workflow__cards div {
     width: 100%;
-    /*aspect-ratio: 1 / 1;*/
+    aspect-ratio: auto 1 / 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,6 +54,8 @@
     position: relative;
     overflow: hidden;
 }
+
+
 
 .workflow__item {
     padding-left: 30px;
@@ -79,6 +83,9 @@
 
 .workflow__list {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .workflow__nums {

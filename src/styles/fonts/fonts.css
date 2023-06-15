@@ -1,19 +1,25 @@
 @font-face {
     src: url("./Rubik-Regular.ttf");
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
 }
 
 @font-face {
     src: url("./Rubik-Medium.ttf");
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-weight: 500;
 }
 
 @font-face {
     src: url("./Rubik-SemiBold.ttf");
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-weight: 600;
+}
+
+@font-face {
+    src: url("./Roboto-Regular.ttf");
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 
@@ -23,12 +29,12 @@
 }
 
 .h1 {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
-    line-height: 57px;
-    /* identical to box height */
+    /*line-height: 57px;*/
+    /*!* identical to box height *!*/
 
     text-transform: uppercase;
 
@@ -36,36 +42,38 @@
 }
 
 .h2 {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 60px;
-    line-height: 130%;
-    /* or 78px */
+    /*line-height: 130%;*/
+    /*!* or 78px *!*/
+
     leading-trim: both;
     text-edge: cap;
 }
 
 .h3 {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    line-height: 130%;
-    /* or 42px */
+    /*line-height: 130%;*/
+    /*!* or 42px *!*/
 
     text-align: center;
-
     color: var(--softWhite);
 }
 
 .card-accent-font {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
-    line-height: 130%;
-    /* or 47px */
+    /*line-height: 130%;*/
+    /*!* or 47px *!*/
+
+    width: 80%;
 
     text-transform: uppercase;
 
@@ -73,7 +81,7 @@
 }
 
 .card-title-font {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -84,30 +92,30 @@
 }
 
 .card-subtitle-font {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 24px;
-    /* identical to box height */
+    /*line-height: 24px;*/
+    /*!* identical to box height *!*/
 
     text-transform: uppercase;
 }
 
 .card-li-font {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 235%;
-    /* or 47px */
+    /*line-height: 235%;*/
+    /*!* or 47px *!*/
 
 
     color: var(--softWhite);
 }
 
 .card-back-font {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -123,7 +131,7 @@
 }
 
 .team-font {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -140,7 +148,7 @@
 }
 
 .project-font {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -153,17 +161,16 @@
 }
 
 .h1-contacts {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 64px;
     line-height: 130%;
     /* or 83px */
-
     /* leading-trim and text-edge are draft CSS properties.
-
     Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
     */
+
     leading-trim: both;
     text-edge: cap;
 
@@ -172,17 +179,16 @@
 }
 
 .h2-contacts {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 180%;
     /* or 43px */
-
     /* leading-trim and text-edge are draft CSS properties.
-
     Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
     */
+
     leading-trim: both;
     text-edge: cap;
 
@@ -190,7 +196,7 @@
 }
 
 .form-font {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -200,7 +206,7 @@
 }
 
 .workflow__nums-font {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 190px;
