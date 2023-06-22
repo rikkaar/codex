@@ -132,8 +132,7 @@ const OrderForm = () => {
     useEffect(() => {
         if (!name.validationErrors.length && name.isDirty &&
             !phone.validationErrors.length && phone.isDirty &&
-            !email.validationErrors.length && email.isDirty &&
-            !message.validationErrors.length && message.isDirty) {
+            !email.validationErrors.length && email.isDirty) {
             setButtonDisabled(false)
         } else setButtonDisabled(true)
 
@@ -213,7 +212,7 @@ const OrderForm = () => {
                     onBlur={message.onBlur}
                     rows="5"
                 />
-                <DrawErrors errors={message.validationErrors}/>
+                {/*<DrawErrors errors={message.validationErrors}/>*/}
             </div>
 
             <button

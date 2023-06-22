@@ -89,7 +89,7 @@ html {
 }
 
 .btn {
-    padding: 12px 20px;
+    padding: 14px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,6 +133,8 @@ html {
     transform-style: preserve-3d;
     transform: rotateY(180deg);
 }
+
+
 
 
 .flashcard__back {
@@ -185,11 +187,13 @@ html {
     content: "";
     width: 40%;
     height: 2px;
-    background-color: var(--softWhite);
+    background-image: linear-gradient(354deg, #A531DC 0%, #6440DF 30.73%, #4F45E0 61.98%, #1952E2 100%);
+
     display: block;
     position: absolute;
     bottom: 105px;
 }
+
 
 .contacts__phone {
     font-weight: 400;

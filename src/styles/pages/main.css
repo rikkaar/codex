@@ -121,6 +121,11 @@
     /*display: flex;*/
     /*flex-direction: column;*/
     /*justify-content: space-between;*/
+    transition: ease-out .3s;
+}
+
+.about__card:hover {
+    filter: hue-rotate(30deg);
 }
 
 .about__card--back {

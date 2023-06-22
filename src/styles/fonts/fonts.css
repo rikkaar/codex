@@ -25,7 +25,7 @@
 
 .btn-font {
     font-weight: 600;
-    font-size: 13px;
+    font-size: 17px;
 }
 
 .btn-font--contacts {
@@ -201,6 +201,12 @@
     line-height: 21px;
 
     color: var(--softWhite);
+}
+
+.skills__font {
+    color: var(--softWhite);
+    font-size: 14px;
+    line-height: 140%;
 }
 
 .workflow__nums-font {

@@ -9,17 +9,11 @@ const NavBar = () => {
             <div className={"container navbar"}>
                 <Link to={"/"} className={"navbar__logo logo"}></Link>
                 <ul className={"navbar__fonts"}>
-                    <li className={"navbar__font"}>
-                        <Scroll spy={true} smooth={true} offset={50} duration={1000} to={"about"} className={""}>О
-                            нас</Scroll>
-                    </li>
-                    <li className={"navbar__font"}>
-                        <Scroll spy={true} smooth={true} offset={50} duration={1000} to={"projects"}
-                                className={""}>Проекты</Scroll>
-                    </li>
+                    <Link to={"/about"} className={"navbar__font"}>О нас</Link>
+                    <Link to={"/projects"} className={"navbar__font"}>Проекты</Link>
                     <Link to={"/calculator"} className={"navbar__font"}>Калькулятор</Link>
                     <li className={"navbar__font"}>
-                        <Scroll spy={true} smooth={true} offset={50} duration={1000} to={"about"}
+                        <Scroll spy={true} smooth={true} offset={50} duration={1000} to={"contacts"}
                                 className={""}>Контакты</Scroll>
                     </li>
                     <li className={"navbar__font"}>
