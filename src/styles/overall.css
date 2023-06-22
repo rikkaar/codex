@@ -198,3 +198,51 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.contacts__social {
+    gap: 13px
+}
+
+.social {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 13px;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.social__link {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 0.3s;
+}
+
+.social__link:hover {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.social__link--whatsapp {
+    background-image: url("/src/assets/icons/WhatsApp.svg");
+}
+
+.social__link--telegram {
+    background-image: url("/src/assets/icons/Telegram.svg");
+}
+
+.contacts__social__link--whatsapp {
+    width: 18px;
+    height: 18px;
+}
+
+.contacts__social__link--telegram {
+    width: 18px;
+    height: 14px;
+}
