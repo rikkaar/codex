@@ -28,6 +28,12 @@
     font-size: 13px;
 }
 
+.btn-font--contacts {
+    color: #F9F9F9;
+    font-size: 17px;
+    font-weight: 600;
+}
+
 .h1 {
     font-family: 'Rubik', sans-serif;
     font-style: normal;
@@ -97,9 +103,6 @@
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
-    line-height: 38px;
-    /* identical to box height */
-
     text-transform: uppercase;
 }
 
@@ -145,8 +148,6 @@
     font-style: normal;
     font-weight: 500;
     font-size: 23px;
-    line-height: 38px;
-    /* identical to box height */
 
     text-transform: uppercase;
 
@@ -161,9 +162,7 @@
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 38px;
-    /* identical to box height */
+    font-size: 23px;
 
     text-transform: uppercase;
 
@@ -174,13 +173,7 @@
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 64px;
-    line-height: 130%;
-    /* or 83px */
-    /* leading-trim and text-edge are draft CSS properties.
-    Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
-    */
-
+    font-size: 45px;
     leading-trim: both;
     text-edge: cap;
 
@@ -192,12 +185,7 @@
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 180%;
-    /* or 43px */
-    /* leading-trim and text-edge are draft CSS properties.
-    Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
-    */
+    font-size: 17px;
 
     leading-trim: both;
     text-edge: cap;
@@ -209,7 +197,7 @@
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 21px;
 
     color: var(--softWhite);

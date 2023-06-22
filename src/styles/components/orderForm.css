@@ -1,0 +1,48 @@
+.form {
+    width: 100%;
+}
+
+.input__title {
+    margin-bottom: 5px;
+}
+
+.form__input {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 12px;
+    background-color: rgba(249, 249, 249, 0.85);
+    padding: 5px 20px;
+    min-height: 50px;
+    transition: ease-in-out 0.1s;
+    border: none;
+    color: black;
+}
+
+.form__textarea {
+    padding: 10px 20px;
+}
+
+.form__section {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.form__section:first-child {
+    margin-top: 0;
+}
+
+.form__input:focus {
+    outline: none;
+    background-color: var(--softWhite);
+}
+
+.btn--contacts {
+    margin-top: 40px;
+    padding: 14px 25px;
+    border-radius: 10px;
+}
+
+.input__error {
+    color: #dc4040;
+    margin-top: 5px;
+}

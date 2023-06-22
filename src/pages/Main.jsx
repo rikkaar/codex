@@ -1,6 +1,8 @@
 import React from 'react';
 import {Helmet} from 'react-helmet';
 import FlashCard from "@components/FlashCard.jsx";
+import OrderForm from "@components/OrderForm.jsx";
+import {Link} from "react-router-dom";
 
 
 const Main = () => {
@@ -64,10 +66,44 @@ const Main = () => {
             <section id={"about"} className={"about section"}>
                 <div className="section__content">
                     <h2 className={"section__title h2"}>О команде</h2>
-                    <h3 className={"section__subtitle h3"}>Для достижения максимального качества, над вашим проектом будет
+                    <h3 className={"section__subtitle h3"}>Для достижения максимального качества, над вашим проектом
+                        будет
                         работать целая команда специалистов</h3>
                 </div>
                 <FlashCard/>
+            </section>
+            <section id={"projects"} className={"projects section"}>
+                <div className="section__content">
+                    <h2 className={"section__title h2"}>Проекты</h2>
+                    <h3 className={"section__subtitle h3"}>Разработка мобильных приложений - это создание уникального
+                        инновационного продукта, который является отличным решением для вашего бизнеса. Ознакомьтесь с
+                        нашими идеями успешных продуктов, которые мы сможем разработать для вас</h3>
+                </div>
+                <div className="projects__grid">
+                    <div className="projects__card project__greenhouse">
+                        <h4 className="projects__title project-font">GreenHouse</h4>
+                    </div>
+                    <div className="projects__card project__iamelect">
+                        <h4 className="projects__title project-font">IamElect</h4>
+                    </div>
+                </div>
+            </section>
+            <section id={"contacts"} className={"section contacts"}>
+                <div className="contacts__info">
+                    <div className="contacts__greet">
+                        <h1 className="h1-contacts">Заинтересовались нашей&nbsp;компанией?</h1>
+                        <h1 className="h1-contacts">Свяжитесь с нами!</h1>
+                    </div>
+                    <div className="contacts__data">
+                        <p className={"h2-contacts"}>Телефон:  <Link to={"tel:+79200112255"} className={"contacts__phone"}>+7 (920) 011-22-55</Link></p>
+                        <p className={"h2-contacts"}>E-mail:  <Link to={"mailto:codex.ru@mail.ru?subject=Заявка на разработку"} className={"contacts__phone"}>codex.ru@mail.ru</Link></p>
+                        <p className={"h2-contacts"}>Юр.адрес:  </p>
+                        <p className={"h2-contacts"}>Ссылки на соц.сети</p>
+                    </div>
+                </div>
+                <div className="contacts__form">
+                    <OrderForm/>
+                </div>
             </section>
         </div>
 

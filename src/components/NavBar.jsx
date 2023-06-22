@@ -23,7 +23,7 @@ const NavBar = () => {
                                 className={""}>Контакты</Scroll>
                     </li>
                     <li className={"navbar__font"}>
-                        <Link to={"tel:+74997046237"} className={"navbar__phone"}>+7 (499) 704-62-37</Link>
+                        <Link to={"tel:+79200112255"} className={"navbar__phone"}>+7 (920) 011-22-55</Link>
                     </li>
                 </ul>
             </div>
