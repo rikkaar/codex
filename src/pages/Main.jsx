@@ -1,11 +1,30 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Helmet} from 'react-helmet';
 import FlashCard from "@components/FlashCard.jsx";
 import OrderForm from "@components/OrderForm.jsx";
 import {Link} from "react-router-dom";
+import Typed from "typed.js"
+import Demo from "../components/Demo.jsx";
+import Footer from "../components/Footer.jsx";
 
 
 const Main = () => {
+    const weDevelop = useRef(null)
+
+    useEffect(() => {
+        const typed = new Typed(weDevelop.current, {
+            strings: ["Мобильные приложения", "Web&#8211;приложения", "Микро&#8211;контроллеры"],
+            startDelay: 300,
+            typeSpeed: 50,
+            backSpeed: 50,
+            backDelay: 800,
+            smartBackspace: true,
+            fadeOut: true,
+            loop: true,
+            showCursor: false,
+        });
+    }, [])
+
     return (
         <div className={"content container"}>
             <Helmet>
@@ -19,7 +38,9 @@ const Main = () => {
                 </div>
                 <div className="welcome-card welcome__2">
                     <p className={"card-subtitle-font"}>Мы разработаем для вас</p>
-                    <p className={"card-accent-font"}>Мобильные приложения</p>
+                    <div className={"typewriter-wrapper"}>
+                        <span className={"card-accent-font typewriter"} ref={weDevelop}></span>
+                    </div>
                 </div>
                 <div className="welcome-card welcome__3">
                     <p className={"card-accent-font"}>Поддержка разработанных нами продуктов</p>
@@ -95,7 +116,7 @@ const Main = () => {
                         <h1 className="h1-contacts">Свяжитесь с нами!</h1>
                     </div>
                     <div className="contacts__data">
-                        <p className={"h2-contacts"}>Телефон:  <Link to={"tel:+79200112255"} className={"contacts__phone"}>+7 (920) 011-22-55</Link></p>
+                        <p className={"h2-contacts"}>Телефон:  <Link to={"tel:+79200112255"} className={"contacts__phone"}>+7(920)&nbsp;011&#8211;22&#8211;55</Link></p>
                         <p className={"h2-contacts"}>E-mail:  <Link to={"mailto:codex.ru@mail.ru?subject=Заявка на разработку"} className={"contacts__phone"}>codex.ru@mail.ru</Link></p>
                         <p className={"h2-contacts"}>Юр.адрес:  </p>
                         <p className={"h2-contacts"}>Ссылки на соц.сети:
@@ -114,6 +135,7 @@ const Main = () => {
                     <OrderForm/>
                 </div>
             </section>
+            <Footer/>
         </div>
 
     );

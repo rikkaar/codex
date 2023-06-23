@@ -19,8 +19,10 @@
 
 .welcome__2 {
     grid-area: welcome__2;
+    justify-content: flex-start;
     background: linear-gradient(225deg, #551EF0 0%, #0FE0FA 99.99%, #0AEDFB 100%);
     gap: 35px;
+    padding-top: 20%;
 }
 
 .welcome__3 {
@@ -264,4 +266,24 @@
 
 .project__iamelect:hover {
     background-image: url("src/assets/iamelect_preview_on.png");
+}
+
+.typewriter {
+    display: inline-block;
+    width: 100%;
+    word-break: break-word;
+}
+
+.motion-demo {
+    position: absolute;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 300ms;
+    border-radius: 0.75rem;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    /*background-image: radial-gradient(circle at 20px 20px, red 100%, transparent 80%);*/
 }

@@ -50,7 +50,7 @@ const About = () => {
                         <h1 className="h1-contacts">Свяжитесь с нами!</h1>
                     </div>
                     <div className="contacts__data">
-                        <p className={"h2-contacts"}>Телефон:  <Link to={"tel:+79200112255"} className={"contacts__phone"}>+7 (920) 011-22-55</Link></p>
+                        <p className={"h2-contacts"}>Телефон:  <Link to={"tel:+79200112255"} className={"contacts__phone"}>+7(920)&nbsp;011&#8211;22&#8211;55</Link></p>
                         <p className={"h2-contacts"}>E-mail:  <Link to={"mailto:codex.ru@mail.ru?subject=Заявка на разработку"} className={"contacts__phone"}>codex.ru@mail.ru</Link></p>
                         <p className={"h2-contacts"}>Юр.адрес:  </p>
                         <p className={"h2-contacts"}>Ссылки на соц.сети:
