@@ -1,5 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
+import {useWindow} from "../store/store.js";
 
 const cards = [
     <div className="flashcard">
@@ -68,25 +69,7 @@ const cards = [
 ];
 
 const FlashCard = () => {
-    const [windowSize, setWindowSize] = useState(getWindowSize());
-
-    useEffect(() => {
-        function handleWindowResize() {
-            // console.log(getWindowSize())
-            setWindowSize(getWindowSize());
-        }
-
-        window.addEventListener('resize', handleWindowResize);
-
-        return () => {
-            window.removeEventListener('resize', handleWindowResize);
-        };
-    }, []);
-
-    function getWindowSize() {
-        const {innerWidth, innerHeight} = window;
-        return {innerWidth, innerHeight};
-    }
+    const browser = useWindow((state) => state.browser)
 
     const [selectedCard, setSelectedCard] = useState(null);
     const cardRefs = useRef([]);
@@ -100,8 +83,8 @@ const FlashCard = () => {
         },
         notSelected:{
             rotateY: 0,
-            zIndex: 9,
-            opacity: selectedCard ? 0.6 : 1,
+            zIndex: 0,
+            opacity: selectedCard ? browser.browser.name === "Safari" ? 1 : 0.6 : 1,
             boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px',
             transition: {duration: .35}
         }

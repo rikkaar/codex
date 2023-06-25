@@ -2,9 +2,13 @@ import React, {useEffect, useRef} from 'react';
 import {Link as Scroll} from 'react-scroll'
 import {Link} from "react-router-dom";
 import {motion, useMotionTemplate, useMotionValue, useScroll, useTransform} from "framer-motion";
+import {useWindow} from "../store/store.js";
 
 
 const NavBar = () => {
+    const windowOptions = useWindow((state) => state.windowOptions)
+
+
     const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
     const useBoundedScroll = (bounds, scrollOptions, startingScroll) => {
@@ -16,7 +20,6 @@ const NavBar = () => {
             [0, 1],
         )
 
-
         setInterval(() => {})
 
         useEffect(() => {
@@ -27,10 +30,6 @@ const NavBar = () => {
                 if (current < startingScroll) {
                     newScrollBounded = 0
                 }
-                // console.log(scrollY)
-                console.log(current)
-                // console.log(clamp(newScrollBounded, 0, bounds))
-                console.log(scrollBounded)
                 scrollBounded.set(clamp(newScrollBounded, 0, bounds))
             })
         }, [bounds, scrollY, scrollBoundedProgress])
@@ -67,9 +66,15 @@ const NavBar = () => {
             >
                 <Link to={"/"} className={"navbar__logo logo"}></Link>
                 <motion.ul className={"navbar__fonts"} style={{opacity}}>
-                    <Link to={"/about"} className={"navbar__font"}>О&nbsp;нас</Link>
-                    <Link to={"/projects"} className={"navbar__font"}>Проекты</Link>
-                    <Link to={"/calculator"} className={"navbar__font"}>Калькулятор</Link>
+                    <li className={"navbar__font"}>
+                        <Link to={"/about"} >О&nbsp;нас</Link>
+                    </li>
+                    <li className={"navbar__font"}>
+                        <Link to={"/projects"} className={"navbar__font"}>Проекты</Link>
+                    </li>
+                    <li className={"navbar__font"}>
+                        <Link to={"/calculator"} className={"navbar__font"}>Калькулятор</Link>
+                    </li>
                     <li className={"navbar__font"}>
                         <Scroll spy={true} smooth={true} offset={50} duration={1000} to={"contacts"}
                                 className={""}>Контакты</Scroll>

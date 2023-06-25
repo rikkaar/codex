@@ -2,27 +2,35 @@ import React, {useEffect, useRef} from 'react';
 import {Helmet} from 'react-helmet';
 import FlashCard from "@components/FlashCard.jsx";
 import OrderForm from "@components/OrderForm.jsx";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import Typed from "typed.js"
 import Footer from "../components/Footer.jsx";
 
 
 const Main = () => {
+    const navigate = useNavigate();
     const weDevelop = useRef(null)
 
     useEffect(() => {
-        const typed = new Typed(weDevelop.current, {
-            strings: ["Мобильные<br>приложения", "Web&#8211;приложения", "Микро&#8211;контроллеры"],
-            startDelay: 300,
-            typeSpeed: 50,
-            backSpeed: 50,
-            backDelay: 800,
-            smartBackspace: true,
-            fadeOut: true,
-            loop: true,
-            showCursor: false,
-        });
-    }, [])
+        if (weDevelop?.current) {
+            const typed = new Typed(weDevelop.current, {
+                strings: ["Мобильные<br>приложения", "Web&#8211;приложения", "Микро&#8211;контроллеры"],
+                startDelay: 300,
+                typeSpeed: 50,
+                backSpeed: 50,
+                backDelay: 800,
+                smartBackspace: true,
+                fadeOut: true,
+                loop: true,
+                showCursor: false,
+            });
+
+            return () => {
+                typed.destroy();
+            };
+        }
+
+    }, [navigate])
 
     return (
         <div className={"content container"}>
@@ -118,7 +126,7 @@ const Main = () => {
                         <p className={"h2-contacts"}>Телефон:  <Link to={"tel:+79200112255"} className={"contacts__phone"}>+7(920)&nbsp;011&#8211;22&#8211;55</Link></p>
                         <p className={"h2-contacts"}>E-mail:  <Link to={"mailto:codex.ru@mail.ru?subject=Заявка на разработку"} className={"contacts__phone"}>codex.ru@mail.ru</Link></p>
                         <p className={"h2-contacts"}>Юр.адрес:  </p>
-                        <p className={"h2-contacts"}>Ссылки на соц.сети:
+                        <div className={"h2-contacts"}>Ссылки на соц.сети:
                             <ul className="contacts__social social">
                                 <li className="social__item">
                                     <Link to={"https://api.whatsapp.com/send?phone=79200112255"} target="_blank" className="social__link social__link--whatsapp contacts__social__link--whatsapp" aria-label="Перейти в ватсап"></Link>
@@ -127,7 +135,7 @@ const Main = () => {
                                     <Link to={"https://t.me/+79200112255"} target="_blank" className="social__link social__link--telegram contacts__social__link--telegram" aria-label="Перейти в телеграм"></Link>
                                 </li>
                             </ul>
-                        </p>
+                        </div>
                     </div>
                 </div>
                 <div className="contacts__form">
