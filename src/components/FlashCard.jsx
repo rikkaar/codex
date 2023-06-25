@@ -115,7 +115,7 @@ const FlashCard = () => {
         <div className={"about__grid"}>
             {cards.map((card, i) => (
                 <motion.div
-                    key={card}
+                    key={i}
                     className={card.props.className}
                     ref={el => cardRefs.current.push(el)}
                     onMouseUp={e => handleCardMouseUp(e, card)}
