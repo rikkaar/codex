@@ -4,7 +4,6 @@ import FlashCard from "@components/FlashCard.jsx";
 import OrderForm from "@components/OrderForm.jsx";
 import {Link} from "react-router-dom";
 import Typed from "typed.js"
-import Demo from "../components/Demo.jsx";
 import Footer from "../components/Footer.jsx";
 
 
@@ -13,7 +12,7 @@ const Main = () => {
 
     useEffect(() => {
         const typed = new Typed(weDevelop.current, {
-            strings: ["Мобильные приложения", "Web&#8211;приложения", "Микро&#8211;контроллеры"],
+            strings: ["Мобильные<br>приложения", "Web&#8211;приложения", "Микро&#8211;контроллеры"],
             startDelay: 300,
             typeSpeed: 50,
             backSpeed: 50,

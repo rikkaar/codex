@@ -115,12 +115,13 @@ const FlashCard = () => {
         <div className={"about__grid"}>
             {cards.map((card, i) => (
                 <motion.div
-                    key={i}
+                    key={card}
                     className={card.props.className}
                     ref={el => cardRefs.current.push(el)}
                     onMouseUp={e => handleCardMouseUp(e, card)}
                     variants={cardVariants}
                     animate={selectedCard === card ? "selected" : "notSelected"}
+                    custom={selectedCard ? selectedCard - card : 0}
                 >{card.props.children}</motion.div>
             ))}
         </div>
