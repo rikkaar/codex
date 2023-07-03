@@ -11,7 +11,9 @@ const cards = [
         <div className="card about__card--back flashcard__back">
             <h4 className={"card-title-font"}>Project manager</h4>
             <ul className={"card__list"}>
-                <li className={"card-back-font"}>Отвечает за весь проект — от встречи с клиентом и формулировки задачи до сдачи и запуска</li>
+                <li className={"card-back-font"}>Отвечает за весь проект — от встречи с клиентом и формулировки задачи
+                    до сдачи и запуска
+                </li>
             </ul>
         </div>
     </div>,
@@ -23,7 +25,9 @@ const cards = [
         <div className="card about__card--back flashcard__back">
             <h4 className={"card-title-font"}>Analyst</h4>
             <ul className={"card__list"}>
-                <li className={"card-back-font"}>Анализ потребностей заказчика и формулировка требований к программной системе, которая должна покрыть эти потребности</li>
+                <li className={"card-back-font"}>Анализ потребностей заказчика и формулировка требований к программной
+                    системе, которая должна покрыть эти потребности
+                </li>
             </ul>
         </div>
     </div>,
@@ -35,7 +39,9 @@ const cards = [
         <div className="card about__card--back flashcard__back">
             <h4 className={"card-title-font"}>Designer</h4>
             <ul className={"card__list"}>
-                <li className={"card-back-font"}>Обеспечить команду разработки тем материалом, из которого они будут собирать продукт</li>
+                <li className={"card-back-font"}>Обеспечить команду разработки тем материалом, из которого они будут
+                    собирать продукт
+                </li>
             </ul>
         </div>
     </div>,
@@ -59,10 +65,22 @@ const cards = [
         <div className="card flashcard__back about__card--back">
             <h4 className={"card-title-font card-title-font--center"}>Programmer</h4>
             <ul className={"card__list"}>
-                <li className={"card-back-font"}><span className={"card-back-font--highlight"}>Frontend developer</span> - занимается разработкой пользовательского интерфейса, то есть той части сайта или приложения, которую видят посетители страницы</li>
-                <li className={"card-back-font"}><span className={"card-back-font--highlight"}>Backend developer</span> - пишет серверный код, отвечает за реакцию ресурса на действия пользователя и выдачу информации</li>
-                <li className={"card-back-font"}><span className={"card-back-font--highlight"}>Mobile developer</span> - создает приложения (программы) для телефонов, планшетов и других мобильных устройств</li>
-                <li className={"card-back-font"}><span className={"card-back-font--highlight"}>Microcontroller programmer</span> - занимается созданием и применением программного обеспечения для управляющих блоков электронных и электронно-механических систем, устройств и механизмов</li>
+                <li className={"card-back-font"}><span
+                    className={"card-back-font--highlight"}>Frontend developer</span> - занимается разработкой
+                    пользовательского интерфейса, то есть той части сайта или приложения, которую видят посетители
+                    страницы
+                </li>
+                <li className={"card-back-font"}><span
+                    className={"card-back-font--highlight"}>Backend developer</span> - пишет серверный код, отвечает за
+                    реакцию ресурса на действия пользователя и выдачу информации
+                </li>
+                <li className={"card-back-font"}><span className={"card-back-font--highlight"}>Mobile developer</span> -
+                    создает приложения (программы) для телефонов, планшетов и других мобильных устройств
+                </li>
+                <li className={"card-back-font"}><span className={"card-back-font--highlight"}>Microcontroller programmer</span> -
+                    занимается созданием и применением программного обеспечения для управляющих блоков электронных и
+                    электронно-механических систем, устройств и механизмов
+                </li>
             </ul>
         </div>
     </div>,
@@ -70,9 +88,27 @@ const cards = [
 
 const FlashCard = () => {
     const browser = useWindow((state) => state.browser)
+    const windowOptions = useWindow((state) => state.windowOptions)
+
 
     const [selectedCard, setSelectedCard] = useState(null);
+
+
     const cardRefs = useRef([]);
+
+    const [{
+        startX,
+        startScrollLeft,
+        isDragging
+    }, setDragStart] = useState({
+        startX: undefined,
+        startScrollLeft: undefined,
+        isDragging: false
+    });
+
+    const containerRef = useRef()
+
+
     const cardVariants = {
         selected: {
             rotateY: 180,
@@ -81,7 +117,7 @@ const FlashCard = () => {
             zIndex: 10,
             boxShadow: 'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px'
         },
-        notSelected:{
+        notSelected: {
             rotateY: 0,
             zIndex: 0,
             opacity: selectedCard ? browser.browser.name === "Safari" ? 1 : 0.6 : 1,
@@ -94,21 +130,29 @@ const FlashCard = () => {
         setSelectedCard(selectedCard ? null : card);
     }
 
-    return (
-        <div className={"about__grid"}>
-            {cards.map((card, i) => (
-                <motion.div
-                    key={i}
-                    className={card.props.className}
-                    ref={el => cardRefs.current.push(el)}
-                    onMouseUp={e => handleCardMouseUp(e, card)}
-                    variants={cardVariants}
-                    animate={selectedCard === card ? "selected" : "notSelected"}
-                    custom={selectedCard ? selectedCard - card : 0}
-                >{card.props.children}</motion.div>
-            ))}
-        </div>
-    )
+    if (windowOptions.innerWidth > 1024) {
+        return (
+            <div className={"about__grid"}>
+                {cards.map((card, i) => (
+                    <motion.div
+                        key={i}
+                        className={card.props.className}
+                        ref={el => cardRefs.current.push(el)}
+                        onMouseUp={e => handleCardMouseUp(e, card)}
+                        variants={cardVariants}
+                        animate={selectedCard === card ? "selected" : "notSelected"}
+                        custom={selectedCard ? selectedCard - card : 0}
+                    >{card.props.children}</motion.div>
+                ))}
+            </div>
+        )
+    } else {
+        return (
+            <div>hello!</div>
+        )
+    }
+
+
 }
 
 export default FlashCard;

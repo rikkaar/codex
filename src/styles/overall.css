@@ -75,7 +75,7 @@ html {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    min-width: 343px;
+    /*min-width: 343px;*/
 }
 
 .card {

@@ -1,5 +1,5 @@
 .welcome {
-    padding-top: 62px;
+    margin-top: 62px;
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: repeat(3, 1fr);
@@ -8,21 +8,23 @@
     grid-template-areas:
     "welcome__main welcome__main welcome__2"
     "welcome__main welcome__main welcome__3";
-    height: 616px;
+    height: calc(75vh - 120px);
+    width: 100%;
 }
 
 .welcome__main {
     grid-area: welcome__main;
-    gap: 130px;
+    /*gap: 130px;*/
+    justify-content: space-between;
+    padding: 110px 30px 70px;
+    min-width: 550px;
+    /*min-width: calc(60vw);*/
     background: linear-gradient(225deg, #A531DC 0%, #1952E2 100%);
 }
 
 .welcome__2 {
     grid-area: welcome__2;
-    justify-content: flex-start;
     background: linear-gradient(225deg, #551EF0 0%, #0FE0FA 99.99%, #0AEDFB 100%);
-    gap: 35px;
-    padding-top: 20%;
 }
 
 .welcome__3 {
@@ -248,7 +250,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.4s;
     cursor: pointer;
 }
 
@@ -269,9 +271,20 @@
 }
 
 .typewriter {
+    text-align: center;
     display: inline-block;
     width: 100%;
     word-break: break-word;
+    color: var(--softWhite);
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: uppercase;
+}
+
+.typewriter-wrapper {
+    min-height: calc(2.2rem * 1.3)
 }
 
 .motion-demo {
@@ -286,4 +299,89 @@
     width: 100%;
     height: 100%;
     /*background-image: radial-gradient(circle at 20px 20px, red 100%, transparent 80%);*/
+}
+
+
+.welcome__typewriter {
+    width: 100%;
+    text-align: center;
+    color: var(--softWhite);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+}
+
+.card-f {
+    position: relative;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    background: white;
+    margin: 2rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.flashcards__container {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    perspective: 150px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.flashcards__container::-webkit-scrollbar {
+    display: none;
+}
+
+.flashcards-f {
+    height: 100%;
+    width: 15%;
+    display: grid;
+    place-items: center center;
+    background: #4da6ff;
+}
+
+.carousel {
+    width: 100%;
+    background: #707070;
+}
+
+.carousel__wrapper {
+    width: 100%;
+    background: red;
+    display: grid;
+    place-items: center center;
+
+}
+
+.carousel__container {
+    display: inline;
+    width: 30%;
+    margin: 10px 0;
+    background: green;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+
+    perspective: 150px;
+}
+
+.carousel__container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.carousel__card {
+    position: relative;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    background: white;
+    margin: 2rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
 }

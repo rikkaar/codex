@@ -78,8 +78,6 @@
     font-size: 16px;
     line-height: 19px;
 
-    text-transform: uppercase;
-
     color: var(--softWhite);
 }
 
@@ -88,7 +86,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 26px;
-    /*line-height: 130%;*/
+    line-height: 130%;
     /*!* or 47px *!*/
 
     width: 90%;

@@ -5,6 +5,8 @@ import OrderForm from "@components/OrderForm.jsx";
 import {Link, useNavigate} from "react-router-dom";
 import Typed from "typed.js"
 import Footer from "../components/Footer.jsx";
+import FlashCardsCarousel from "../components/FlashCardsCarousel.jsx";
+// import Carousel from "../components/Carousel.jsx";
 
 
 const Main = () => {
@@ -14,7 +16,7 @@ const Main = () => {
     useEffect(() => {
         if (weDevelop?.current) {
             const typed = new Typed(weDevelop.current, {
-                strings: ["Мобильные<br>приложения", "Web&#8211;приложения", "Микро&#8211;контроллеры"],
+                strings: ["Мобильные приложения", "Web&#8211;приложения", "Микро&#8211;контроллеры"],
                 startDelay: 300,
                 typeSpeed: 50,
                 backSpeed: 50,
@@ -40,14 +42,16 @@ const Main = () => {
             <section className={"welcome"}>
                 <div className="card welcome__main">
                     <div className={"welcome__logo logo"}></div>
-                    <h1 className={"h1"}>Слоган</h1>
+                    <div style={{width: "100%"}}>
+                        <p className={"welcome__typewriter"}>Мы разработаем для вас</p>
+                        <div className={"typewriter-wrapper"}>
+                            <span className={"typewriter"} ref={weDevelop}></span>
+                        </div>
+                    </div>
                     <button className={"btn btn-font welcome__btn"}>Отправить заявку</button>
                 </div>
                 <div className="welcome-card welcome__2">
-                    <p className={"card-subtitle-font"}>Мы разработаем для вас</p>
-                    <div className={"typewriter-wrapper"}>
-                        <span className={"card-accent-font typewriter"} ref={weDevelop}></span>
-                    </div>
+                    <h1 className={"card-accent-font"}>Слоган</h1>
                 </div>
                 <div className="welcome-card welcome__3">
                     <p className={"card-accent-font"}>Поддержка разработанных нами продуктов</p>
@@ -59,11 +63,11 @@ const Main = () => {
                 </div>
                 <div className="workflow__cards">
                     <div className="workflow__card workflow__card1">
-                        <h4 className="workflow__title card-title-font">Митап</h4>
+                        <h4 className="workflow__title card-title-font">Meet-up</h4>
                         <ul className={"workflow__list"}>
                             <li className={"workflow__item card-li-font"}>Аналитика и исследование</li>
                             <li className={"workflow__item card-li-font"}>Подбор команды</li>
-                            <li className={"workflow__item card-li-font"}>Помощь в составлении тз</li>
+                            <li className={"workflow__item card-li-font"}>Помощь в составлении технического задания</li>
                         </ul>
                         <span className={"workflow__nums-font workflow__nums"}>1</span>
                     </div>
@@ -98,7 +102,9 @@ const Main = () => {
                         будет
                         работать целая команда специалистов</h3>
                 </div>
-                <FlashCard/>
+                {/*<FlashCard/>*/}
+                <FlashCardsCarousel/>
+                {/*<Carousel/>*/}
             </section>
             <section id={"projects"} className={"projects section"}>
                 <div className="section__content">
