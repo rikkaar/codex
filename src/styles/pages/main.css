@@ -8,7 +8,8 @@
     grid-template-areas:
     "welcome__main welcome__main welcome__2"
     "welcome__main welcome__main welcome__3";
-    height: calc(75vh - 120px);
+    height: calc(85vh - 120px);
+    max-height: 600px;
     width: 100%;
 }
 
@@ -17,7 +18,7 @@
     /*gap: 130px;*/
     justify-content: space-between;
     padding: 110px 30px 70px;
-    min-width: 550px;
+    min-width: 560px;
     /*min-width: calc(60vw);*/
     background: linear-gradient(225deg, #A531DC 0%, #1952E2 100%);
 }

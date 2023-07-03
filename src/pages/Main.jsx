@@ -102,8 +102,8 @@ const Main = () => {
                         будет
                         работать целая команда специалистов</h3>
                 </div>
-                {/*<FlashCard/>*/}
-                <FlashCardsCarousel/>
+                <FlashCard/>
+                {/*<FlashCardsCarousel/>*/}
                 {/*<Carousel/>*/}
             </section>
             <section id={"projects"} className={"projects section"}>

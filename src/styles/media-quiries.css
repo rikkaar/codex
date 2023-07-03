@@ -33,7 +33,7 @@
     }
 
     .navbar__font {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .navbar__logo {
@@ -55,7 +55,32 @@
     }
 
     .navbar {
-        flex-direction: row-reverse;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbar__fonts {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        border-radius: 0 0 30px 30px;
+        background-color: var(--bg);
+        overflow: hidden;
+    }
+
+    .navbar__font {
+        font-size: 16px;
+    }
+
+    .navbar__logo {
+        height: 100%;
+        width: 11%;
+        min-width: 130px;
+        display: block;
+    }
+
+    .navbar-bg {
+        height: auto;
     }
 }
 

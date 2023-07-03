@@ -31,6 +31,28 @@
     justify-self: flex-end;
     gap: 82px;
     cursor: pointer;
+    margin: 0;
+}
+
+.navbar__wrapper {
+    height: 54px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.navbar__burger {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 100000;
+    /*height: 50px;*/
+    /*width: 50px;*/
+    /*background-color: red;*/
 }
 
 
