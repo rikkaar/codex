@@ -166,7 +166,7 @@ const FlashCard = () => {
         setDragStart(prev => ({...prev, isDragging: false}))
     }
 
-    if (windowOptions.innerWidth > 1024) {
+    if (windowOptions.innerWidth > 768) {
         return (
             <div className={"about__grid"}>
                 {cards.map((card, i) => (

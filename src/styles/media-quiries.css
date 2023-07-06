@@ -1,3 +1,10 @@
+@media (hover:hover) {
+    .about__card:hover {
+        filter: hue-rotate(30deg);
+    }
+}
+
+
 @media (max-width: 1300px) {
     .navbar__fonts {
         gap: 50px;
@@ -15,9 +22,15 @@
         gap: 98px;
         /*margin-bottom: 250px;*/
     }
+
+    .flashcard {
+        min-height: calc(100vw / 3 - 120px);
+    }
 }
 
 @media (max-width: 1160px) {
+
+
     .navbar__fonts {
         gap: 40px;
     }
@@ -46,6 +59,10 @@
 }
 
 @media (max-width: 768px) {
+    .flashcard {
+        min-height: calc(100vw / 2 - 50px);
+    }
+
     .footer__contacts {
         display: inherit;
     }

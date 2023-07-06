@@ -225,6 +225,7 @@
 .about__card--programmer {
     grid-column: 2 span;
     aspect-ratio: initial;
+    max-width: inherit;
 }
 
 .card-title-font--center {
