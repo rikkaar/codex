@@ -176,9 +176,11 @@
 }
 
 .card__list {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 13px;
+    white-space: normal;
 }
 
 .team__project {
@@ -328,8 +330,8 @@
 .flashcards__container {
     max-width: 100%;
     white-space: nowrap;
+    border-radius: 40px;
     overflow-x: scroll;
-    perspective: 150px;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -340,10 +342,11 @@
 
 .flashcards-f {
     height: 100%;
-    width: 15%;
+    width: 100%;
     display: grid;
+    border-radius: 40px;
+    overflow: hidden;
     place-items: center center;
-    background: #4da6ff;
 }
 
 .carousel {
@@ -375,6 +378,9 @@
     display: none;
 }
 
+.flashcards__container {
+    width: 100%;
+}
 
 .carousel__card {
     position: relative;
@@ -382,6 +388,7 @@
     height: 80px;
     width: 80px;
     background: white;
+    color: black;
     margin: 2rem 1rem;
     border-radius: 15px;
     cursor: pointer;

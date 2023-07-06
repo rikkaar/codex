@@ -6,6 +6,7 @@ import {Link, useNavigate} from "react-router-dom";
 import Typed from "typed.js"
 import Footer from "../components/Footer.jsx";
 import FlashCardsCarousel from "../components/FlashCardsCarousel.jsx";
+import Carousel from "../components/Carousel.jsx";
 // import Carousel from "../components/Carousel.jsx";
 
 

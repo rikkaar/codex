@@ -1,6 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
 import {useWindow} from "../store/store.js";
+import VerticalFlashCard from "./VerticalFlashCard.jsx";
 
 const cards = [
     <div className="flashcard">
@@ -58,7 +59,7 @@ const cards = [
         </div>
     </div>,
     <div className="flashcard about__card--programmer">
-        <div className="card about__card about__card--programmer">
+        <div className="card about__card">
             <h4 className={"team-font card-title-font--center"}>Programmer</h4>
             <span className={"team__img team__programmer"}></span>
         </div>
@@ -84,7 +85,11 @@ const cards = [
             </ul>
         </div>
     </div>,
+    // VerticalFlashCard()
 ];
+
+console.log(cards[4])
+console.log(cards[5])
 
 const FlashCard = () => {
     const browser = useWindow((state) => state.browser)
@@ -92,10 +97,6 @@ const FlashCard = () => {
 
 
     const [selectedCard, setSelectedCard] = useState(null);
-
-
-    const cardRefs = useRef([]);
-
     const [{
         startX,
         startScrollLeft,
@@ -106,28 +107,63 @@ const FlashCard = () => {
         isDragging: false
     });
 
-    const containerRef = useRef()
+    const cardRefs = useRef([]);
+    const containerRef = useRef(null);
 
+    const handleMouseDown = e => {
+        setDragStart({
+            startX: e.pageX - containerRef.current.offsetLeft,
+            startScrollLeft: containerRef.current.scrollLeft,
+            isDragging: true
+        });
+    }
+
+    const handleMouseMove = e => {
+        if (!isDragging || selectedCard) return;
+        const x = e.pageX - containerRef.current.offsetLeft;
+        const walk = x - startX;
+        console.log(walk)
+        containerRef.current.scrollLeft = startScrollLeft - walk;
+    }
+
+    const selectCard = card => {
+        setSelectedCard(selectedCard !== null ? null : card);
+        console.log(selectedCard)
+        console.log(card)
+        if (selectedCard == null) {
+            cardRefs.current[card].scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
+        }
+    }
 
     const cardVariants = {
         selected: {
             rotateY: 180,
             transition: {duration: .35},
-            opacity: 1,
             zIndex: 10,
-            boxShadow: 'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px'
+            // boxShadow: 'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px'
         },
         notSelected: {
             rotateY: 0,
             zIndex: 0,
-            opacity: selectedCard ? browser.browser.name === "Safari" ? 1 : 0.6 : 1,
-            boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px',
+            // boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px',
             transition: {duration: .35}
         }
     }
 
     const handleCardMouseUp = (e, card) => {
-        setSelectedCard(selectedCard ? null : card);
+        if (isDragging) {
+            const x = e.pageX - containerRef.current.offsetLeft;
+            const walk = x - startX;
+            if (Math.abs(walk) < 5) selectCard(card);
+        } else selectCard(card);
+    }
+
+    const handleDragEnd = () => {
+        setDragStart(prev => ({...prev, isDragging: false}))
     }
 
     if (windowOptions.innerWidth > 1024) {
@@ -138,17 +174,38 @@ const FlashCard = () => {
                         key={i}
                         className={card.props.className}
                         ref={el => cardRefs.current.push(el)}
-                        onMouseUp={e => handleCardMouseUp(e, card)}
+                        onMouseUp={e => handleCardMouseUp(e, i)}
                         variants={cardVariants}
-                        animate={selectedCard === card ? "selected" : "notSelected"}
-                        custom={selectedCard ? selectedCard - card : 0}
+                        animate={selectedCard === i ? "selected" : "notSelected"}
+                        custom={selectedCard ? i : 0}
                     >{card.props.children}</motion.div>
                 ))}
             </div>
         )
     } else {
         return (
-            <div>hello!</div>
+            <div
+                className="flashcards-f"
+
+
+            >
+                <motion.div
+                    className="flashcards__container"
+                    ref={containerRef}
+                >
+                    {cards.map((card, i) => (
+                        <motion.div
+                            key={i}
+                            className={"flashcard flashcard--mobile"}
+                            ref={el => cardRefs.current.push(el)}
+                            onMouseUp={e => handleCardMouseUp(e, i)}
+                            variants={cardVariants}
+                            animate={selectedCard === i ? "selected" : "notSelected"}
+                            custom={selectedCard ? i : 0}
+                        >{card.props.children}</motion.div>
+                    ))}
+                </motion.div>
+            </div>
         )
     }
 
