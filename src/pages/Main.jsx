@@ -105,7 +105,9 @@ const Main = () => {
                 </div>
                 <FlashCard/>
                 {/*<FlashCardsCarousel/>*/}
-                {/*<Carousel/>*/}
+            </section>
+            <section className={"projects__carousel section"}>
+                <Carousel/>
             </section>
             <section id={"projects"} className={"projects section"}>
                 <div className="section__content">

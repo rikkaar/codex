@@ -59,6 +59,14 @@
     text-edge: cap;
 }
 
+.projects__info__font {
+    color: var(--softWhite);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+}
+
 .h3 {
     font-family: 'Rubik', sans-serif;
     font-style: normal;
