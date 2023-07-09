@@ -2,6 +2,7 @@ import React, {useRef, useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
 import {useWindow} from "../store/store.js";
 import VerticalFlashCard from "./VerticalFlashCard.jsx";
+import ProgrammerCarousel from "./ProgrammerCarousel.jsx";
 
 const cards = [
     <div className="flashcard">
@@ -60,10 +61,10 @@ const cards = [
     </div>,
     <div className="flashcard about__card--programmer">
         <div className="card about__card">
-            <h4 className={"team-font card-title-font--center"}>Programmer</h4>
+            <h4 className={"team-font card-title-font--center"}>Programmers</h4>
             <span className={"team__img team__programmer"}></span>
         </div>
-        <div className="card flashcard__back about__card--back">
+        <div className="card about__card--back flashcard__back">
             <h4 className={"card-title-font card-title-font--center"}>Programmer</h4>
             <ul className={"card__list"}>
                 <li className={"card-back-font"}><span
@@ -85,11 +86,21 @@ const cards = [
             </ul>
         </div>
     </div>,
-    // VerticalFlashCard()
 ];
 
-console.log(cards[4])
-console.log(cards[5])
+let cardsMobile = cards.slice(0)
+cardsMobile.pop(-1)
+cardsMobile.push(<div className="flashcard">
+    <div className="card about__card">
+        <h4 className={"team-font"}>Programmers</h4>
+        <span className={"team__img team__programmer--mobile"}></span>
+    </div>
+    <div className="card about__card--back flashcard__back">
+        <h4 className={"card-title-font"}>Programmer</h4>
+        <ProgrammerCarousel/>
+    </div>
+</div>)
+
 
 const FlashCard = () => {
     const browser = useWindow((state) => state.browser)
@@ -186,14 +197,15 @@ const FlashCard = () => {
         return (
             <div
                 className="flashcards-f"
-
-
+                onMouseDown={handleMouseDown}
+                onMouseUp={handleDragEnd}
+                onMouseMove={handleMouseMove}
             >
                 <motion.div
                     className="flashcards__container"
                     ref={containerRef}
                 >
-                    {cards.map((card, i) => (
+                    {cardsMobile.map((card, i) => (
                         <motion.div
                             key={i}
                             className={"flashcard flashcard--mobile"}

@@ -61,9 +61,9 @@ const Carousel = () => {
     const arrowRight = useAnimation()
 
     const slideVariants = {
-        enter: (direction) => ({x: direction * 1000}),
-        center: {x: 0},
-        exit: (direction) => ({x: direction * -1000}),
+        enter: (direction) => ({x: direction * 1000, opacity: 0}),
+        center: {x: 0, opacity: 1, zIndex: 1},
+        exit: (direction) => ({x: direction * -1500, opacity: 0, zIndex: 0}),
     }
     const swipeConfidenceThreshold = 10000;
     const swipePower = (offset, velocity) => {
@@ -71,7 +71,7 @@ const Carousel = () => {
     };
     return (
         <motion.div className={"swiper__wrapper"}>
-            <AnimatePresence custom={direction}>
+            <AnimatePresence custom={direction} mode={"popLayout"}>
                 <motion.div
                     drag="x"
                     dragConstraints={{ left: 0, right: 0 }}
@@ -93,42 +93,24 @@ const Carousel = () => {
                     exit='exit'
                     custom={direction}
                     transition={{
-                        duration: 1,
+                        duration: 0.6,
                     }}
                 >{cards[page].props.children}
                 </motion.div>
             </AnimatePresence>
 
-
-            {/*{cards.map((card, index) => {*/}
-            {/*    return  (*/}
-            {/*        <motion.div*/}
-            {/*            className={"swiper__card"}*/}
-            {/*        >*/}
-            {/*            {index}*/}
-            {/*        </motion.div>*/}
-            {/*    )*/}
-            {/*})}*/}
             <motion.div className={"arrows"}>
-                <motion.div className={"arrow arrow--left"} animate={arrowLeft} onClick={() => {
+                <motion.div
+                    className={"arrow arrow--left"}
+                    whileTap={{ scale: 0.8 }}
+                    onClick={() => {
                     paginate(-1)
-                    arrowLeft.start({
-                        scale: [1, 1.1, 1],
-                        transition: {
-                            duration: 0.2,
-                            stiffness: 200
-                        }
-                    })
                 }}></motion.div>
-                <motion.div className={"arrow arrow--right"} animate={arrowRight} onClick={() => {
+                <motion.div
+                    className={"arrow arrow--right"}
+                    whileTap={{ scale: 0.8 }}
+                    onClick={() => {
                     paginate(1)
-                    arrowRight.start({
-                        scale: [1, 1.1, 1],
-                        transition: {
-                            duration: 0.2,
-                            stiffness: 200
-                        }
-                    })
                 }}></motion.div>
             </motion.div>
             <motion.div className={"bullets"}>
